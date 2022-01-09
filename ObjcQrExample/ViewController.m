@@ -75,10 +75,10 @@
 }
 
 - (CGRect)makePreviewRectWithFrame:(CGRect)frame {
-    CGFloat padding = 20;
-    CGFloat width = frame.size.width - padding * 2;
-    CGSize size = CGSizeMake(width, width / 2);
-    CGPoint point = CGPointMake(padding, frame.size.height / 2 - size.height / 2);
+    // プレビューが正方形になるようにサイズを算出
+    CGFloat width = frame.size.width / 2;
+    CGSize size = CGSizeMake(width, width);
+    CGPoint point = CGPointMake(frame.size.width / 2 - size.width / 2, frame.size.height / 2 - size.height / 2);
 
     return CGRectMake(point.x, point.y, size.width, size.height);
 }
