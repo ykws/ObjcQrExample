@@ -19,9 +19,9 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+
     CGRect previewRect = [self makePreviewRectWithFrame:self.view.frame];
     self.maskLayerView.layer.mask = [self makeMaskWithRect:previewRect inFrame:self.maskLayerView.frame];
 
